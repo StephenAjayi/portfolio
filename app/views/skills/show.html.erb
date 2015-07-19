@@ -2,8 +2,30 @@
 
 <p><%= @skill.description %></p>
 
-<p><%= link_to "Return to skills", skills_path %></p>
+<% if @skill.projects.any? %>
+  <h4>Here are the projects I have done using <%= @skill.name %>:</h4>
 
+  <ul>
+    <% @skill.projects.each do |project| %>
+      <li>
+        <%= link_to project.name, skill_project_path(@skill, project) %> |
+        <%= link_to "Edit", edit_skill_project_path(@skill, project) %>|
+        <%= link_to "Delete", skill_project_path(@skill, project),
+                                 :data => {:confirm => "Are you sure?",
+                                                :method => "delete"} %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no projects yet!</p>
+<% end %>
+
+<p><%= link_to "Add a project", new_skill_project_path(@skill) %></p>
+<p><%= link_to "Delete Skill", skill_path(@skill),
+                        :data => {:confirm => "Are you sure?",
+                                       :method => "delete"} %></p>
+
+<p><%= link_to "Return to skills", skills_path %></p>
 <p><%= link_to "Edit", edit_skill_path(@skill) %></p>
 <button><%= link_to "Delete", skill_path(@skill),
                          :data => {:confirm => "You sure?",
