@@ -1,28 +1,11 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Author: Stephen Ajayi
 
-Things you may want to cover:
+Program: Portfolio is a RoR project to show case skills and projects I have created.
 
-* Ruby version
+Setup: bundle and run rake db:create 
 
-* System dependencies
+License: Mit license, feel free to use for whatever you like! Images are the property of there rightful owners, no copyright infringement intended.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Known bugs: None.
