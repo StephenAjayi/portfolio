@@ -4,8 +4,10 @@ Author: Stephen Ajayi
 
 Program: Portfolio is a RoR project to show case skills and projects I have created.
 
-Setup: bundle and run rake db:create 
+Setup: bundle and run rake db:create
 
 License: Mit license, feel free to use for whatever you like! Images are the property of there rightful owners, no copyright infringement intended.
 
 Known bugs: None.
+
+Demo: https://obscure-thicket-8666.herokuapp.com/
