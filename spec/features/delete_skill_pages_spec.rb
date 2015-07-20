@@ -5,9 +5,6 @@ describe "the delete a skill process" do
     skill = Skill.create(:name => 'Ruby', :description => "ruby is..")
     visit skill_path(skill)
     click_on 'Delete skill'
-    page.accept_alert do
-      click_link 'Show Alert'
-    end
-    expect(page).to have_content 'Skill successfully updated!'
+    expect(page).to have_content 'Skill successfully destroyed!'
   end
 end

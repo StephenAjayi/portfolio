@@ -42,7 +42,7 @@ class ProjectsController < ApplicationController
     @skill = Skill.find(params[:skill_id])
     @project = Project.find(params[:id])
     @project.destroy
-    "Project successfully destroyed!"
+    flash[:notice] = "Project successfully destroyed!"
     redirect_to skill_path(@skill)
   end
 
