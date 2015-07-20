@@ -2,4 +2,4 @@
 
 <p>Description: <%= @project.description %></p>
 
-<p>Github: <a href="<%= @project.url %>"><%= @project.url %></a></p>
+<p>Github: <%= link_to @project.url, @project.url %>
