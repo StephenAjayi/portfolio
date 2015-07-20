@@ -9,4 +9,10 @@ describe "the add a skill process" do
     click_on 'Create Skill'
     expect(page).to have_content 'Skill successfully added!'
   end
+
+  it "gives error when no name is entered" do
+    visit new_skill_path
+    click_on 'Create Skill'
+    expect(page).to have_content 'errors'
+  end
 end
